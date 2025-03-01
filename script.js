@@ -9,15 +9,15 @@ const wordCategories = {
         'PAPAYA', 'CHERRY', 'LEMON', 'PEACH', 'PLUM',
         'KIWI', 'MELON', 'PEAR', 'BERRY', 'LIME'
     ],
-    mixed: [
-        'HELLO', 'WORLD', 'SMILE', 'HAPPY', 'SUNNY',
-        'BEACH', 'MUSIC', 'DANCE', 'PAINT', 'BOOK',
-        'LEARN', 'DREAM', 'PEACE', 'LOVE', 'HOPE'
+    animals: [
+        'ELEPHANT', 'GIRAFFE', 'ZEBRA', 'DOLPHIN', 'TIGER',
+        'PENGUIN', 'KOALA', 'KANGAROO', 'MONKEY', 'LION',
+        'TURTLE', 'PANDA', 'WOLF', 'EAGLE', 'SHARK'
     ]
 };
 
-let wordDatabase = [...wordCategories.mixed];
-let currentCategory = 'mixed';
+let wordDatabase = [...wordCategories.animals];
+let currentCategory = 'animals';
 
 const WORDS_PER_GAME = 5;
 let words = [];
@@ -401,7 +401,7 @@ function setupSettingsModal() {
             <div class="setting-group">
                 <label for="category-select">Select Word Category:</label>
                 <select id="category-select">
-                    <option value="mixed">Mixed Words</option>
+                    <option value="animals">Animals</option>
                     <option value="computerScience">Computer Science</option>
                     <option value="fruits">Fruits</option>
                     <option value="custom">Custom Words</option>
@@ -479,7 +479,7 @@ startGameBtn.addEventListener('click', () => {
 
 // Don't auto-initialize the game anymore
 // Instead, just set up the initial word database
-wordDatabase = [...wordCategories.mixed];
+wordDatabase = [...wordCategories.animals];
 
 document.getElementById('hint-btn').addEventListener('click', showHint);
 document.getElementById('give-up-btn').addEventListener('click', giveUp);
